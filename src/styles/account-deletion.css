@@ -1,0 +1,268 @@
+/* Simple, plain layout for the ChaiShots Account Deletion page */
+
+.account-deletion-page * {
+  box-sizing: border-box;
+}
+
+.account-deletion-page {
+  background: #ffffff;
+  color: #111827;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.account-deletion-page main.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+/* Section with left-aligned text */
+.account-deletion-page .text-section {
+  margin-bottom: 40px;
+}
+
+.account-deletion-page .text-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+.account-deletion-page .text-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.account-deletion-page .text-section p {
+  display: block;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  color: #111827;
+  line-height: 1.8;
+}
+
+.account-deletion-page .text-section p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Bullet list */
+.account-deletion-page .bullet-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.account-deletion-page .bullet-list li {
+  margin: 0 0 12px 0;
+  padding: 0 0 0 24px;
+  position: relative;
+  color: #111827;
+  line-height: 1.8;
+}
+
+.account-deletion-page .bullet-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.account-deletion-page .bullet-list a {
+  color: #111827;
+  text-decoration: underline;
+}
+
+.account-deletion-page .bullet-list a:hover {
+  text-decoration: none;
+}
+
+/* Centered CTA section */
+.account-deletion-page .cta-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.account-deletion-page .cta-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: #111827;
+}
+
+.account-deletion-page .cta-section p {
+  margin: 0 0 24px 0;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.account-deletion-page .cta-subtext {
+  line-height: 1.6;
+}
+
+/* Button */
+.account-deletion-page .button-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.account-deletion-page .button-primary:hover {
+  background: #000000;
+}
+
+.account-deletion-page .button-primary:active {
+  background: #1f2937;
+}
+
+/* Divider line */
+.account-deletion-page .divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 40px 0;
+  height: 0;
+}
+
+/* Footer */
+.account-deletion-page .page-footer {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 60px;
+  padding: 40px;
+  background: #ffffff;
+}
+
+.account-deletion-page .footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.account-deletion-page .footer-left {
+  flex: 0 0 auto;
+}
+
+.account-deletion-page .footer-logo {
+  font-size: 1rem;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.account-deletion-page .footer-right {
+  display: flex;
+  gap: 60px;
+}
+
+.account-deletion-page .footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.account-deletion-page .footer-column h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  color: #111827;
+}
+
+.account-deletion-page .footer-column a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 200ms ease;
+}
+
+.account-deletion-page .footer-column a:hover {
+  color: #111827;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .account-deletion-page main.content {
+    padding: 40px 24px;
+  }
+
+  .account-deletion-page .text-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .account-deletion-page .text-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .account-deletion-page .cta-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .account-deletion-page .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .account-deletion-page .footer-right {
+    width: 100%;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-deletion-page main.content {
+    padding: 30px 16px;
+  }
+
+  .account-deletion-page .text-section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .account-deletion-page .text-section p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .account-deletion-page .cta-section {
+    margin: 30px 0;
+  }
+
+  .account-deletion-page .cta-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
+
+  .account-deletion-page .cta-section p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .account-deletion-page .divider {
+    margin: 30px 0;
+  }
+
+  .account-deletion-page .footer-content {
+    gap: 20px;
+    padding: 0;
+  }
+
+  .account-deletion-page .footer-right {
+    gap: 30px;
+  }
+
+  .account-deletion-page .footer-column a {
+    font-size: 0.85rem;
+  }
+}
