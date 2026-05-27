@@ -1,0 +1,93 @@
+.storytelling-container {
+  position: relative;
+  z-index: 10;
+}
+
+.storytelling-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150vw;
+  height: 150vh;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: -1;
+  pointer-events: none;
+  animation: pulseGlow 6s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.4; transform: translate(-50%, -50%) scale(0.9); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.storytelling-text-glow {
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+/* Add some smooth hover states to the images if they exist */
+.framer-7z0njd img {
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.6s ease;
+}
+
+.framer-7z0njd img:hover {
+  transform: scale(1.05) translateY(-10px) !important;
+  filter: brightness(1.2) drop-shadow(0 20px 40px rgba(0, 255, 255, 0.2));
+  z-index: 20;
+}
+
+/* Floating Animations for Devices */
+.floating-device {
+  transition: scale 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform, scale, translate;
+  cursor: pointer;
+}
+
+.floating-device:hover {
+  scale: 1.05;
+  z-index: 20;
+}
+
+@keyframes floatUpDown {
+  0% { translate: 0 0px; }
+  50% { translate: 0 -20px; }
+  100% { translate: 0 0px; }
+}
+
+.float-anim-device { animation: floatUpDown 6s ease-in-out infinite; }
+.ssr-variant:nth-child(1) .float-anim-device { animation-duration: 6s; }
+.ssr-variant:nth-child(2) .float-anim-device { animation-duration: 7.5s; animation-delay: -1.5s; }
+.ssr-variant:nth-child(3) .float-anim-device { animation-duration: 5s; animation-delay: -3s; }
+.ssr-variant:nth-child(4) .float-anim-device { animation-duration: 6.5s; animation-delay: -1s; }
+.ssr-variant:nth-child(5) .float-anim-device { animation-duration: 8s; animation-delay: -4s; }
+
+/* Arch Circle Rotation Animation */
+.arch-circle-rotate {
+  animation: rotateCircle 30s linear infinite;
+  transform-origin: center;
+}
+
+.arch-circle-rotate:has(.arch-image-float:hover) {
+  animation-play-state: paused;
+}
+
+@keyframes rotateCircle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.arch-image-float {
+  animation: floatSubtle 4s ease-in-out infinite alternate;
+  transition: transform 0.3s ease, scale 0.3s ease;
+  will-change: transform, scale;
+}
+
+.arch-image-float:hover {
+  scale: 1.05;
+  z-index: 50;
+}
+
+@keyframes floatSubtle {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}

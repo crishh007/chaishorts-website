@@ -1,0 +1,142 @@
+.video-reel-section {
+  margin-top: 180px;
+  padding: 80px 24px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-reel-container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.video-reel-header {
+  margin-bottom: 48px;
+}
+
+.video-reel-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.video-reel-subtitle {
+  font-size: 1.2rem;
+  color: #6e6e73;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Vertical aspect ratio 9:16 */
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
+  background: #000;
+  transform: translateZ(0); /* Fix for border-radius overflow in some browsers */
+}
+
+.reel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.video-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.mute-toggle {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mute-toggle:hover {
+  background: rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.mute-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 24px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.overlay-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.overlay-content p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.cta-button {
+  background: #fccd02;
+  color: #000;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 100%;
+}
+
+.cta-button:hover {
+  background: #ffdb4d;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(252, 205, 8, 0.3);
+}
+
+@media (max-width: 768px) {
+  .video-reel-title {
+    font-size: 2.2rem;
+  }
+  
+  .video-wrapper {
+    max-width: 320px;
+  }
+}
